@@ -1,5 +1,5 @@
 import __new from "../src/core/new";
-test.skip('smock',()=>{
+test('smock',()=>{
     function Person(name){
         this.name=name;
         this.age=21;
