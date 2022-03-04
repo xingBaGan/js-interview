@@ -1,0 +1,29 @@
+//https://babel.docschina.org/setup/#installation
+` yarn add corejs `
+添加vscode 调试配置
+
+```
+{
+    "version": "0.2.0",
+    //https://github.com/xingBaGan/leetcode/blob/main/.vscode/launch.json
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Jest Current File",
+            "program": "${workspaceFolder}/node_modules/.bin/jest",
+            "args": [
+                "${fileBasenameNoExtension}",
+                "--config",
+                "jest.config.js"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true,
+            "windows": {
+                "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+            }
+        }
+    ]
+}
+```
