@@ -12,6 +12,7 @@ export default function __bind(context = globalThis, ...outArgs) {
         if (this instanceof newConstructor) {
             func.call(this, ...outArgs,...innerArgs)
         } else {
+            // 这里是作为普通函数调用
             func.call(context, ...outArgs,...innerArgs)
         }
     }
