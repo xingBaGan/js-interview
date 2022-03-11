@@ -1,6 +1,6 @@
 const FUNC_ERROR_TEXT = 'Expected a function';
 export default function __bind(context = globalThis, ...outArgs) {
-    if (!(typeof this === 'function')) {
+    if (!(getBoxType(this) === 'function')) {
         throw new TypeError(FUNC_ERROR_TEXT)
     }
     //获取调用的函数
