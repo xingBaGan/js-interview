@@ -1,3 +1,4 @@
+import getBoxType from '../utils/getBoxType'
 const FUNC_ERROR_TEXT = 'Expected a function';
 export default function __bind(context = globalThis, ...outArgs) {
     if (!(getBoxType(this) === 'function')) {

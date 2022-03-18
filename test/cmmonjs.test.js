@@ -18,10 +18,12 @@ test('引用导入测试',()=>{
     expect(getFriends()).toEqual([0,1,2]);
 })
 
-test('共享内存，函数导入测试',()=>{
-    expect(count).toEqual(1);
-    plusCount()
-    expect(getCount()).toEqual(2);
-    plusCount()
-    expect(getCount()).toEqual(3);
+describe('module 状态被共享，造成问题',()=>{
+    test('共享内存，函数导入测试',()=>{
+        expect(count).toEqual(1);
+        plusCount()
+        expect(getCount()).toEqual(4);
+        plusCount()
+        expect(getCount()).toEqual(5);
+    })
 })

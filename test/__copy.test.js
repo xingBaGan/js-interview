@@ -57,12 +57,11 @@ test('smock',()=>{
         scores:[88,99,100]
     }
     let clone = {};
-    let clone2 = {};
     expect(clone.copyDeep(source)).toEqual(source)
     expect(clone.copyDeep(source)).toStrictEqual(source)
     expect(clone.mother).toEqual(mother)
     expect(Object.is(clone.mother,mother)).toBe(false)
 
-    expect(clone.eat === source.eat).toBe(false)
+    expect(clone.eat === source.eat).toBe(true)
     
 })
